@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transcripción y Resumen de Videos de YouTube</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <!-- Enlace a Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Transcripción y Resumen de Videos de YouTube</h1>
+            <h3>Utilizando LLM Bart y Whisper de OpenAI</h3>
+        </header>
+        
+        <div class="content">
+            <h2>Descripción del Proyecto</h2>
+            <p>El proyecto se centra en la transcripción y resumen de videos de YouTube utilizando modelos de lenguaje generativo. Se emplean tecnologías de inteligencia artificial para convertir el audio en texto y generar un resumen del contenido.</p>
+            
+            <h2>Funcionalidades Principales</h2>
+            <ul>
+                <li>Incluye la transcripción automática del audio de videos de YouTube utilizando el modelo LLM Bart de OpenAI. También proporciona la capacidad de generar un resumen del contenido del video utilizando el modelo Whisper de OpenAI.</li>
+            </ul>
+            
+            <h2>Tecnologías Utilizadas</h2>
+            <p>El proyecto utiliza Flask como framework web en Python. Se emplean diversas bibliotecas, como pytube para descargar videos de YouTube, pydub para manipular archivos de audio, Whisper de OpenAI para la transcripción de voz y transformers para el resumen de texto. Además, se hace uso de la API de Google Translate para la traducción de texto.</p>
+            
+            <h2>Resultados</h2>
+            <p>Los resultados incluyen transcripciones precisas de los videos de YouTube, así como resúmenes concisos que capturan los puntos clave del contenido. La plataforma es capaz de manejar una variedad de temas y acentos de audio.</p>
+        </div>
+        
+        <div class="image-container">
+            <img src="transcript2.png" alt="Imagen 1">
+            <img src="transcript_resumen.png" alt="Imagen 2">
+        </div>
+        
+        <!-- Icono de GitHub directamente desde Font Awesome -->
+        <div>
+            <a href="https://github.com/mariano4659/Projects/tree/main/Youtube%20video%20transcribe%20and%20summarize">
+                <div class="icon"><i class="fab fa-github" id="github-icon"></i></div>
+            </a>
+            <div id="ripple-effect"></div>
+        </div>
+
+        <!-- Video de YouTube -->
+        <h3>Video test</h3>
+        <iframe width="860" height="515" src="https://www.youtube.com/embed/N0NM6tzVgp8" frameborder="0" allowfullscreen></iframe>
+        
+    </div>
+    <script src="script.js"></script>
+    <style>
+        .container {
+            position: relative;
+        }
+        
+        .image-container {
+            display: block;
+            margin-top: 20px;
+            
+            text-align: center;
+        }
+        
+        .image-container img {
+            width: 40vw;
+            margin-bottom: 20px;
+            height: auto;
+            max-width: 100%;
+            transition: transform 0.3s ease;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+        }
+        
+        .image-container img:hover {
+            transform: scale(1.5);
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.8);
+        }
+    </style>
+</body>
+</html>

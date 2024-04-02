@@ -1,0 +1,93 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5;
+}
+.container {
+  max-width: 1000px;
+  margin: 10px auto;
+  padding: 0 20px;
+}
+
+.media-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.media-container iframe,
+.media-container img {
+  flex: 0 0 48%; /* ajusta este valor según sea necesario */
+}
+
+header {
+  color: #000;
+  padding: 10px;
+  text-align: center;
+}
+
+h1 {
+  margin: 0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  font-size: 30px;
+}
+
+.content {
+  font-size: 16px;
+}
+
+p,
+ul {
+  line-height: 1.6;
+}
+
+h2 {
+  margin-top: 30px;
+  color: #000;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+img {
+  max-width: 150%;
+  height: auto;
+  display: block;
+  margin-left: 1vw;
+}
+
+iframe {
+  display: block;
+  margin: 0 auto;
+}
+
+@media (max-width: 767px) {
+  /* Ajusta este valor según tus necesidades */
+  .media-container img {
+    display: none;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 0.5; /* Empieza traslúcido */
+    transform: scale(0.9); /* Ligeramente más pequeño */
+  }
+  50% {
+    opacity: 1; /* Se ilumina */
+    transform: scale(1.1); /* Se agranda un poco */
+  }
+  100% {
+    opacity: 0.5; /* Vuelve a ser traslúcido */
+    transform: scale(0.9); /* Vuelve al tamaño original */
+  }
+}
+
+#github-icon {
+  color: #0c0c0c; /* Color inicial */
+  font-size: 3em; /* Duplica el tamaño del icono */
+  position: fixed; /* Lo posiciona de manera fija */
+  top: 150px; /* Lo coloca 10px desde la parte inferior */
+  right: 5px; /* Lo coloca 10px desde la izquierda */
+  z-index: 999; /* Asegura que esté por encima de otros elementos */
+  animation: pulse 2s infinite; /* Aplica la animación de latido */
+}

@@ -1,0 +1,608 @@
+.language-selector {
+  position: absolute;
+  top: 10px; /* Ajusta la distancia desde la parte superior */
+  right: 12px; /* Ajusta la distancia desde el borde derecho */
+}
+
+.language-selector select {
+  background-color: black;
+  color: white;
+  padding: 0.4vw 0.6vw;
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+  appearance: none;
+  width: 4vw; /* Ancho del select, puedes ajustar según necesites */
+  max-width: 100%; /* Evita que el select sobrepase el ancho de su contenedor */
+  font-size: 0.7vw; /* Tamaño del texto relativo al ancho de la ventana */
+}
+
+.language-selector select:focus {
+  outline: none;
+}
+
+/* Estilo al pasar el mouse sobre el select */
+.language-selector select:hover {
+  background-color: #333; /* Color oscuro cuando se pasa el mouse */
+}
+
+
+
+
+
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.photo {
+  margin: 11px;
+  position: relative;
+}
+
+.photo img {
+  width: 140px; /* Ajusta el tamaño de las imágenes según sea necesario */
+  height: auto;
+  transition: transform 0.3s, box-shadow 0.3s; /* Agrega la propiedad de transición */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Agrega una sombra */
+}
+
+.photo:hover img {
+  transform: scale(1.5); /* Agrandar la imagen al pasar el mouse */
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3); /* Cambia la sombra al pasar el mouse */
+}
+
+
+.caption {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.photo:hover .caption {
+  opacity: 1; /* Mostrar el texto descriptivo al pasar el mouse */
+}
+
+
+
+
+.project-wrapper {
+  
+  position: absolute;
+  display: flex;
+  transform: translateY(50%);
+  left: 10%; /* Ajusta la posición horizontal según sea necesario */
+  top: 65%;
+  }
+  /* Agregar estilos para elementos ocultos */
+
+
+/* Agregar estilos para animación de aparición */
+.fade-in {
+  opacity: 1 !important;
+  transition: opacity 1s ease !important;
+}
+
+/* Estilos para botones activos */
+.button-container button.active {
+  /* Agrega aquí los estilos para los botones activos */
+  background-color: #ccc; /* Por ejemplo, cambia el color de fondo */
+}
+
+
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(45deg, #ffffff, #66707aea, #cecece, #a7a7a7a1, #d8d8d8a1, #ececec, #46464693, #819999, #65696d, #d1a9d6);
+    background-size: 400% 1200%; /* Ajusta el tamaño del gradiente */
+    animation: gradient-animation 25s ease infinite;
+    height: 60vh;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0;
+    position: relative;
+  }
+
+
+.pdf-wrapper {
+  position: relative;
+  width: 80%; /* Puedes ajustar el ancho según sea necesario */
+  margin: 0 auto; /* Esto centrará el contenedor horizontalmente */
+}
+
+.pdf-container {
+  position: absolute;
+  top: 70%; /* Coloca el contenedor en el centro verticalmente */
+  left: 74%; /* Coloca el contenedor en el centro horizontalmente */
+  transform: translate(-50%, 22%); /* Ajusta para centrar completamente */
+  width: 100%; /* Ajusta el ancho del contenedor al 100% */
+  height: 80vh; /* Altura del contenedor, puedes ajustarla según necesites */
+  opacity: 0; /* Establece la opacidad inicialmente en 0 */
+  transition: opacity 0.5s ease; /* Agrega una transición suave */
+}
+
+.sobre-mi-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.sobre-mi-container img {
+  width: 400px; /* Ajusta el tamaño de la imagen según tus necesidades */
+  border-radius: 10%; /* Para una imagen redonda */
+  float: left; /* Coloca la imagen a la izquierda */
+  margin-right: 20px; /* Añade un espacio entre la imagen y el texto */
+  margin-left: 20px;
+  margin-top: 20px;
+}
+
+.texto-sobre-mi {
+  text-align: left; /* Alinea el texto a la derecha */
+  max-width: calc(100% - 220px); /* Resta el ancho de la imagen más el margen derecho para el texto */
+}
+
+.texto-sobre-mi p {
+  font-size: 28px;
+  margin-top: 20px;
+}
+
+
+
+
+
+
+.pdf-container {
+  /* Estilos existentes */
+  transition: opacity 0.7s ease;
+}
+
+.pdf-container.fade-in {
+  opacity: 1;
+}
+
+.pdf-container.fade-out {
+  opacity: 0;
+}
+
+
+#pdf-viewer {
+  width: 50%; /* Ajusta el ancho del visor PDF al 100% del contenedor */
+  height: 100%; /* Ajusta la altura del visor PDF al 100% del contenedor */
+}
+
+
+
+.header {
+  margin-bottom: 2vw;
+  text-align: center;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 2vw;
+  font-family: Arial, sans-serif;
+  color: #000;
+  text-shadow: 0.5vw 0.5vw 1vw rgba(0, 0, 0, 0.5);
+  letter-spacing: 0.2vw;
+  text-transform: uppercase;
+}
+ 
+/* exto de los proyectos*/
+.project-container {
+  width: 20vw; /* Ancho fijo */
+  height: 10vw; /* Alto fijo */
+  background-size: cover;
+  background-repeat: no-repeat;
+  opacity: 0;
+  transition: opacity 1s ease;
+  background-color: rgba(255, 255, 255, 0.651);
+  border-radius: 4px;
+  visibility: hidden;
+  font-family: 'Arial', sans-serif; /* Cambia el tipo de letra para los títulos de los proyectos */
+  color: #ffffff; /* Cambia el color del texto a rojo (#FF0000) */
+  margin: 1.3vw; 
+}
+
+
+
+
+
+.project-container:not(:last-child) {
+  margin-bottom: 2vw; /* Agrega un margen inferior de 2vw a todos los contenedores de proyecto excepto al último */
+}
+
+ 
+
+
+.hidden {
+ 
+  opacity: 0;
+  pointer-events: none;
+}
+
+
+ 
+
+.competencia img {
+  width: 70vw;
+}
+
+.competencia {
+  text-align: center;
+  margin-top: 9px;
+}
+
+ 
+#name {
+  animation-delay: 0s;
+  margin-top: 1vw;
+  font-size: 2vw;
+  color: #000;
+  text-shadow: 0.5vw 0.5vw 1vw rgba(0, 0, 0, 0.5);
+  letter-spacing: 0.2vw;
+  text-transform: uppercase;
+  font-weight: bold;
+  animation: moveUp 1.5s ease forwards;
+  animation-delay: 0.5s;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#name2 {
+  margin-top: 4vw;
+  font-size: 1vw;
+  color: #000;
+  text-shadow: 0.5vw 0.5vw 1vw rgba(0, 0, 0, 0.5);
+  letter-spacing: 0.2vw;
+  text-transform: uppercase;
+  font-weight: bold;
+  position: relative;
+  top: 95%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#description {
+ 
+  margin-left: 6vw;
+  margin-right: 6vw;
+  font-size: 1.2vw;
+  font-family: 'Times New Roman', Times, serif;
+  color: #000;
+ 
+  line-height: 1.5;
+}
+
+.icon-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 2vw;
+}
+.icon-container .icon:hover {
+  color: #d6be5cb7; /* Cambia el color al pasar el mouse por encima */
+}
+.icon-container .icon:hover,
+.icon-container .fab.fa-instagram:hover {
+  color: #d6be5cb7; /* Cambia el color al pasar el mouse por encima */
+}
+
+.icon-container .icon {
+  transition: color 0.3s ease; /* Transición suave */
+}
+.icon {
+  margin-bottom: 0.7vw;
+  margin: 0.7vw;
+  color: #353535;
+  font-size: 4vw;
+}
+
+.button-container {
+  
+  display: flex;
+  justify-content: center;
+  margin-top: 0.3vw;
+}
+
+.proyectos-btn,
+#sobre-mi-btn,
+#curriculum-btn {
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 1vw;
+  padding: 1vw 5vw;
+
+  cursor: pointer;
+  box-shadow: 0.5vw 0.5vw 1vw rgba(0, 0, 0, 0.5);
+  margin: 0 5vw;
+}
+
+.project-container.show {
+  opacity: 0.6;
+  visibility: visible;
+  transition: opacity 1s ease;
+}
+
+.project-container:hover {
+  display: none;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+/* Media queries para pantallas de celular */
+@media screen and (max-width: 768px) {
+
+  
+  .header h1 {
+    font-size: 5vw; /* Reducir el tamaño del título para pantallas pequeñas */
+    text-shadow: 0.2vw 0.2vw 0.3vw rgba(0, 0, 0, 0.5); /* Ajustar sombra del texto */
+    letter-spacing: 0.3vw;
+  }
+  #name2 {
+    margin-top: 15vw;
+    font-size: 2.6vw;
+    color: #000;
+    text-shadow: 0.5vw 0.5vw 1vw rgba(0, 0, 0, 0.5);
+    letter-spacing: 0.2vw;
+    text-transform: uppercase;
+    font-weight: bold;
+    position: relative;
+    top: 95%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+ 
+  #name {
+    font-size: 4vw; /* Cambiar el tamaño del nombre para pantallas pequeñas */
+    text-shadow: 0.2vw 0.2vw 0.3vw rgba(0, 0, 0, 0.5); /* Ajustar sombra del texto */
+    letter-spacing: 0.3vw;
+    margin-bottom: 2vw;
+  }
+
+  #description {
+    margin-left: 4vw; /* Ajustar el margen izquierdo del texto de descripción para pantallas pequeñas */
+    margin-right: 4vw; /* Ajustar el margen derecho del texto de descripción para pantallas pequeñas */
+    font-size: 2.5vw; /* Reducir el tamaño del texto de descripción para pantallas pequeñas */
+  }
+  .icon {
+    font-size: 4vw; /* Cambiar el tamaño de los iconos para pantallas pequeñas */
+  }
+
+  .proyectos-btn,
+  #sobre-mi-btn,
+  #curriculum-btn {
+    font-size: 4vw; /* Cambiar el tamaño de los botones para pantallas pequeñas */
+    padding: 1vw 2vw; /* Ajustar el relleno de los botones para pantallas pequeñas */
+    margin: 0 5vw; /* Ajustar el margen de los botones para pantallas pequeñas */
+   
+  }
+}
+
+
+.proyectos-btn,
+#sobre-mi-btn,
+#curriculum-btn {
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 1vw; /* Cambié a medida relativa */
+  padding: 0.5vw 1vw; /* Cambié a medida relativa */
+  font-size: 1vw; /* Cambié a medida relativa */
+  cursor: pointer;
+  box-shadow: 0.5vw 0.5vw 1vw rgba(0, 0, 0, 0.5); /* Cambié a medida relativa */
+  margin: 0 2vw; /* Cambié a medida relativa */
+}
+
+
+.project-container.show {
+  opacity: 1;
+  width: 15vw; /* Ancho fijo */
+  height: 12vw; /* Alto fijo */
+  visibility: visible;
+  transition: opacity 1s ease;
+
+}
+
+.project-container:hover {
+  display:none;
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
+}
+
+#project1 {
+  background-image: url('https://futuroelectrico.com/wp-content/uploads/2021/07/vision-artificial.jpg');
+}
+
+#project2 {
+  background-image: url('https://media.licdn.com/dms/image/D5612AQFdeGMyiuIMHg/article-cover_image-shrink_720_1280/0/1689581169697?e=1715817600&v=beta&t=7J6Q0SdtDPELgSV7OpWK-qwEUrmNRuaDnUXy91E5CA0');
+}
+
+#project3 {
+  background-image: url('https://www.zohowebstatic.com/sites/zweb/images/analytics/analytics-home-dashbboard-new.webp');
+}
+#project4 {
+  background-image: url('proyectos/transcript.png');
+}
+
+@keyframes gradient-animation {
+  0% {
+      background-position: 0% 50%;
+  }
+  50% {
+      background-position: 100% 50%;
+  }
+  100% {
+      background-position: 0% 50%;
+  }
+}
+
+
+@keyframes moveUp {
+  0% {
+    top: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 1;
+  }
+  100% {
+    top: 0;
+    transform: translate(-50%, 0);
+    opacity: 1;
+  }
+}
+
+@media screen and (max-width: 708px) {
+  .texto-sobre-mi {
+    margin: 10px;
+    text-align: left; /* Alinea el texto a la derecha */
+    max-width: calc(100% - 10vw); /* Resta el ancho de la imagen más el margen derecho para el texto */
+  }
+  
+  .texto-sobre-mi p {
+    font-size: 28px;
+    margin: 30px;
+    margin-top: 20px;
+    
+  }
+  
+  
+
+  .language-selector select {
+    background-color: black;
+    color: white;
+    padding: 0.7vw 0.8vw;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+    appearance: none;
+    width: 9vw; /* Ancho del select, puedes ajustar según necesites */
+    max-width: 100%; /* Evita que el select sobrepase el ancho de su contenedor */
+    font-size: 2vw; /* Tamaño del texto relativo al ancho de la ventana */
+  }
+
+
+  .project-container.show {
+    opacity: 1;
+    width: 25vw; /* Ancho fijo */
+    height: 20vw; /* Alto fijo */
+    visibility: visible;
+    transition: opacity 1s ease;
+    margin-top: 22vw;
+  }
+
+  body {
+    background-size: 150% 750%; /* Ajusta el tamaño del gradiente para pantallas pequeñas */
+  }
+
+  .competencia img {
+    width: 90vw; /* Cambia el tamaño de la imagen según tus necesidades */
+    margin-left: 14vw; /* Mantén el margen izquierdo según tus necesidades */
+  }
+
+  .header h1 {
+    font-size: 4vw; /* Cambié a medida relativa */
+    text-shadow: 1vw 1vw 2vw rgba(0, 0, 0, 0.5); /* Cambié a medida relativa */
+    letter-spacing: 0.6vw; /* Cambié a medida relativa */
+  }
+
+  .header h2 {
+    font-size: 3vw; /* Cambié a medida relativa */
+    text-shadow: 0.5vw 0.5vw 1vw rgba(0, 0, 0, 0.5); /* Cambié a medida relativa */
+    letter-spacing: 0.2vw; /* Cambié a medida relativa */
+  }
+
+ 
+  #description {
+    font-size: 3vw; /* Cambié a medida relativa */
+    text-shadow: 0.5vw 0.5vw 1vw rgba(0, 0, 0, 0.5); /* Cambié a medida relativa */
+    margin-top: 10vw; /* Cambié a medida relativa */
+  }
+
+  .icon {
+    font-size: 7vw; /* Cambié a medida relativa */
+    margin-bottom: 1vw; /* Cambié a medida relativa */
+    margin: 1vw; /* Cambié a medida relativa */
+  }
+
+  .button-container {
+    size: 16px;
+    margin-top: 2vw; /* Cambié a medida relativa */
+  }
+
+  .proyectos-btn,
+  #sobre-mi-btn,
+  #curriculum-btn,
+  #competencias-btn{
+    border-radius: 2vw; /* Cambié a medida relativa */
+    padding: 2vw 2vw; /* Cambié a medida relativa */
+    font-size: 3vw; /* Cambié a medida relativa */
+    margin: 1vw; /* Cambié a medida relativa */
+  }
+  .competencia {
+    display: inline-block; /* Para mostrar los elementos en línea */
+    text-align: center; /* Para centrar el texto */
+    
+    margin-top:5vw;
+}
+.fadeInOut {
+  transition: opacity 1s ease;
+}
+ 
+
+
+}
+@media screen and (min-width: 1000px) {
+  /* Ajusta el tamaño máximo de ciertos elementos */
+  .header h1 {
+    font-size: 1.3vw; /* Ajusta el tamaño máximo */
+  }
+
+  .texto-sobre-mi {
+    text-align: center !important; /* Alinea el texto al centro, utilizando !important para priorizar esta regla */
+    max-width: 87%; /* Ajusta el ancho máximo del texto para ocupar más espacio */
+    margin: 0 auto; /* Centra el texto horizontalmente */
+    margin-top: 20px; /* Ajusta el margen superior */
+  }
+
+  .header h2 {
+    font-size: 1vw; /* Ajusta el tamaño máximo */
+  }
+
+  /* Ajusta el tamaño máximo del contenedor de descripción */
+  #description {
+    font-size: 1.2vw; /* Ajusta el tamaño máximo */
+  }
+  .competencia {
+    display: inline-block; /* Para mostrar los elementos en línea */
+    text-align: center; /* Para centrar el texto */
+    margin-left: 10vw;
+    margin-top:5vw;
+}
+  /* Ajusta el tamaño máximo de los iconos */
+  .icon {
+    font-size: 2vw; /* Ajusta el tamaño máximo */
+  }
+
+  /* Ajusta el tamaño máximo de los botones */
+  .proyectos-btn,
+  #sobre-mi-btn,
+  #curriculum-btn,
+  #competencias-btn {
+    font-size: 1vw; /* Ajusta el tamaño máximo */
+    padding: 0.5vw 1.5vw; /* Ajusta el tamaño máximo */
+    margin: 0 1vw; /* Ajusta el tamaño máximo */
+  }
+}
