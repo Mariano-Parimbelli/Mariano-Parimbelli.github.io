@@ -108,6 +108,11 @@
     </div>
 
     <script>
+        // Llamar a esta función cuando se cargue la página inicialmente
+        window.addEventListener('DOMContentLoaded', (event) => {
+            // Traducir la página al idioma almacenado
+            translatePage();
+        });
         // Función para cargar y traducir el contenido del HTML del proyecto
         async function loadAndTranslateProjectHTML(projectId, targetLanguage) {
             const response = await fetch(`proyectos/${projectId}_${targetLanguage}.html`);
