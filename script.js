@@ -110,7 +110,7 @@ document.getElementById('github-icon').addEventListener('click', function() {
 
         if (pdfContainer.classList.contains('hidden')) {
             pdfContainer.classList.remove('hidden');
-            pdfViewer.src = 'https://drive.google.com/file/d/1eH2KC4GTPyf-fnPUMccPkbB_93CM2bxZ/preview'; // Reemplaza ID_DEL_ARCHIVO con el ID real de tu archivo
+            pdfViewer.src = 'https://drive.google.com/file/d/1FwBwDEoYrUxMxQDCBF_O2oGlIUVyjuxN/preview'; // Reemplaza ID_DEL_ARCHIVO con el ID real de tu archivo
             pdfContainer.classList.add('fade-in'); // Agregar clase para efecto de aparición
         } else {
             pdfContainer.classList.remove('fade-in'); // Remover clase para efecto de aparición
