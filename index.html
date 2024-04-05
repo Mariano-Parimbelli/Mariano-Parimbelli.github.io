@@ -104,39 +104,17 @@
         <!-- Otros elementos .project-container aquí -->
     </div>
     <div class="pdf-container hidden">
-        <iframe id="pdf-viewer" src="drive.google.com/file/d/1eH2KC4GTPyf-fnPUMccPkbB_93CM2bxZ/preview" frameborder="0"></iframe>
+        <iframe id="pdf-viewer" src="https://drive.google.com/file/d/1eH2KC4GTPyf-fnPUMccPkbB_93CM2bxZ/preview" frameborder="0"></iframe>
     </div>
 
     <script>
-        // Llamar a esta función cuando se cargue la página inicialmente
+                // Llamar a esta función cuando se cargue la página inicialmente
         window.addEventListener('DOMContentLoaded', (event) => {
             // Traducir la página al idioma almacenado
             translatePage();
         });
-        // Función para cargar y traducir el contenido del HTML del proyecto
-        async function loadAndTranslateProjectHTML(projectId, targetLanguage) {
-            const response = await fetch(`proyectos/${projectId}_${targetLanguage}.html`);
-            const htmlContent = await response.text();
-            const parser = new DOMParser();
-            const projectDocument = parser.parseFromString(htmlContent, 'text/html');
-
-            // Traducir el contenido del proyecto
-            const elementsToTranslate = projectDocument.querySelectorAll('[data-translate]');
-            elementsToTranslate.forEach(element => {
-                const originalText = element.dataset.translate;
-                googleTranslate(originalText, targetLanguage)
-                    .then(translation => {
-                        element.textContent = translation;
-                    })
-                    .catch(error => {
-                        console.error('Translation Error:', error);
-                    });
-            });
-
-            // Insertar el contenido traducido en el contenedor del proyecto
-            const projectContainer = document.getElementById(projectId);
-            projectContainer.innerHTML = projectDocument.body.innerHTML;
-        }
+        
+ 
 
         // Función para traducir una cadena de texto utilizando Google Translate API
         async function googleTranslate(text, targetLanguage) {
@@ -199,3 +177,4 @@
     <script src="script.js"></script>
 </body>
 </html>
+
