@@ -342,55 +342,7 @@
   transition: opacity 0.3s ease;
 }
 
-/* Media queries para pantallas de celular */
-@media screen and (max-width: 768px) {
 
-  
-  .header h1 {
-    font-size: 5vw; /* Reducir el tamaño del título para pantallas pequeñas */
-    text-shadow: 0.2vw 0.2vw 0.3vw rgba(0, 0, 0, 0.5); /* Ajustar sombra del texto */
-    letter-spacing: 0.3vw;
-  }
-  #name2 {
-    margin-top: 15vw;
-    font-size: 2.6vw;
-    color: #000;
-    text-shadow: 0.5vw 0.5vw 1vw rgba(0, 0, 0, 0.5);
-    letter-spacing: 0.2vw;
-    text-transform: uppercase;
-    font-weight: bold;
-    position: relative;
-    top: 95%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-  
- 
-  #name {
-    font-size: 4vw; /* Cambiar el tamaño del nombre para pantallas pequeñas */
-    text-shadow: 0.2vw 0.2vw 0.3vw rgba(0, 0, 0, 0.5); /* Ajustar sombra del texto */
-    letter-spacing: 0.3vw;
-    margin-bottom: 2vw;
-  }
-
-  #description {
-    margin-left: 4vw; /* Ajustar el margen izquierdo del texto de descripción para pantallas pequeñas */
-    margin-right: 4vw; /* Ajustar el margen derecho del texto de descripción para pantallas pequeñas */
-    font-size: 2.5vw; /* Reducir el tamaño del texto de descripción para pantallas pequeñas */
-  }
-  .icon {
-    font-size: 4vw; /* Cambiar el tamaño de los iconos para pantallas pequeñas */
-  }
-
-  .proyectos-btn,
-  #sobre-mi-btn,
-  #curriculum-btn {
-    font-size: 4vw; /* Cambiar el tamaño de los botones para pantallas pequeñas */
-    padding: 1vw 2vw; /* Ajustar el relleno de los botones para pantallas pequeñas */
-    margin: 0 5vw; /* Ajustar el margen de los botones para pantallas pequeñas */
-   
-  }
-}
 
 
 .proyectos-btn,
@@ -464,7 +416,55 @@
   }
 }
 
-@media screen and (max-width: 708px) {
+@media screen and (max-width: 383px),
+       (min-width: 384px) and (max-width: 671px)
+       {
+  
+  
+  .header h1 {
+    font-size: 5vw; /* Reducir el tamaño del título para pantallas pequeñas */
+    text-shadow: 0.2vw 0.2vw 0.3vw rgba(0, 0, 0, 0.5); /* Ajustar sombra del texto */
+    letter-spacing: 0.3vw;
+  }
+  #name2 {
+    margin-top: 15vw;
+    font-size: 2.6vw;
+    color: #000;
+    text-shadow: 0.5vw 0.5vw 1vw rgba(0, 0, 0, 0.5);
+    letter-spacing: 0.2vw;
+    text-transform: uppercase;
+    font-weight: bold;
+    position: relative;
+    top: 95%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+ 
+  #name {
+    font-size: 4vw; /* Cambiar el tamaño del nombre para pantallas pequeñas */
+    text-shadow: 0.2vw 0.2vw 0.3vw rgba(0, 0, 0, 0.5); /* Ajustar sombra del texto */
+    letter-spacing: 0.3vw;
+    margin-bottom: 2vw;
+  }
+
+  #description {
+    margin-left: 4vw; /* Ajustar el margen izquierdo del texto de descripción para pantallas pequeñas */
+    margin-right: 4vw; /* Ajustar el margen derecho del texto de descripción para pantallas pequeñas */
+    font-size: 2vw; /* Reducir el tamaño del texto de descripción para pantallas pequeñas */
+  }
+  .icon {
+    font-size: 4vw; /* Cambiar el tamaño de los iconos para pantallas pequeñas */
+  }
+
+  .proyectos-btn,
+  #sobre-mi-btn,
+  #curriculum-btn {
+    font-size: 4vw; /* Cambiar el tamaño de los botones para pantallas pequeñas */
+    padding: 1vw 2vw; /* Ajustar el relleno de los botones para pantallas pequeñas */
+    margin: 0 5vw; /* Ajustar el margen de los botones para pantallas pequeñas */
+   
+  }
   .texto-sobre-mi {
     margin: 10px;
     text-align: left; /* Alinea el texto a la derecha */
@@ -493,19 +493,94 @@
     font-size: 2vw; /* Tamaño del texto relativo al ancho de la ventana */
   }
 
+ 
 
-  .project-container.show {
-    opacity: 1;
-    width: 25vw; /* Ancho fijo */
-    height: 20vw; /* Alto fijo */
-    visibility: visible;
-    transition: opacity 1s ease;
-    margin-top: 22vw;
-  }
 
-  body {
-    background-size: 150% 750%; /* Ajusta el tamaño del gradiente para pantallas pequeñas */
-  }
+
+
+
+  .project-wrapper {
+    position: relative;
+    left: 10%;
+    top: 55%;
+    transform: translateY(-50%);
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+@media screen and (max-width: 768px) {
+    .project-wrapper {
+        flex-direction: column; /* Cambia la dirección de apilamiento a vertical */
+        align-items: stretch; /* Ajusta los elementos a lo largo del eje horizontal */
+        left: 0; /* Reinicia el posicionamiento lateral para ocupar todo el ancho */
+        top: 0; /* Reinicia el posicionamiento superior */
+        transform: none; /* Elimina la transformación */
+        width: 100%; /* Ajusta el ancho al 100% */
+    }
+}
+
+
+
+.project-container.show {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 1s ease;
+  margin-top: 2vw;
+  margin-bottom: 2vw;
+  display: grid;
+  grid-template-columns: 1fr; /* Esto hace que los proyectos aparezcan en una sola columna */
+  gap: 20px;
+}
+
+
+.project-container {
+  width: auto; /* Ancho automático */
+  height: auto; /* Altura automática */
+  box-sizing: border-box;
+  overflow: hidden;
+  border: 1px solid #ddd;
+  min-width: 200px; /* Ancho mínimo del contenedor */
+  min-height: 100px; /* Altura mínima del contenedor */
+}
+
+.project-container .photo {
+    width: 100%;
+    padding-top: 100%; /* Hace que el contenedor tenga una relación de aspecto cuadrada */
+    position: relative;
+}
+
+.project-container .photo img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ajusta la imagen para cubrir completamente el contenedor */
+}
+
+/* Estilos para el cuerpo del documento */
+body {
+    font-size: 16px;
+    background-size: 150% 750%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+/* Estilos para hacer que la página se desplace verticalmente si es necesario */
+html,
+body {
+    min-height: 100%;
+}
+
+
+
+
+
+
+
+
 
   .competencia img {
     width: 90vw; /* Cambia el tamaño de la imagen según tus necesidades */
@@ -564,6 +639,9 @@
 
 
 }
+
+
+
 @media screen and (min-width: 1000px) {
   /* Ajusta el tamaño máximo de ciertos elementos */
   .header h1 {
@@ -581,10 +659,7 @@
     font-size: 1vw; /* Ajusta el tamaño máximo */
   }
 
-  /* Ajusta el tamaño máximo del contenedor de descripción */
-  #description {
-    font-size: 1.2vw; /* Ajusta el tamaño máximo */
-  }
+ 
   .competencia {
     display: inline-block; /* Para mostrar los elementos en línea */
     text-align: center; /* Para centrar el texto */
