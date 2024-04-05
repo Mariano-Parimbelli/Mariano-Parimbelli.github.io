@@ -90,14 +90,11 @@ document.getElementById('linkedin-icon').addEventListener('click', function() {
     window.open('https://www.linkedin.com/in/mariano-leandro-parimbelli-680822a0/', '_blank');
 });
 
-// Event listener para el icono de WhatsApp
-document.querySelector('.whatsapp-icon').addEventListener('click', function() {
-    window.open('https://wa.me/+543544620335', '_blank');
-});
+
 
 // Event listener para el icono de GitHub
 document.getElementById('github-icon').addEventListener('click', function() {
-    window.open('https://github.com/mariano4659/Projects', '_blank');
+    window.open('https://github.com/Mariano-Parimbelli/Projects', '_blank');
 });
 
 
