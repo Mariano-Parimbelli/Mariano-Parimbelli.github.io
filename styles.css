@@ -577,7 +577,12 @@ body {
 
 
 
-
+.competencia {
+  text-align: center !important; /* Alinea el texto al centro, utilizando !important para priorizar esta regla */
+  max-width: 87%; /* Ajusta el ancho máximo del texto para ocupar más espacio */
+  margin: 0 auto; /* Centra el texto horizontalmente */
+  margin-left: 30px; /* Ajusta el margen superior */
+}
 
 
 
